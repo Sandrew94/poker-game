@@ -1,0 +1,22 @@
+{
+  "name": "poker-game",
+  "version": "1.0.0",
+  "description": "Given various poker hands as arguments, print what type of hand each argument is.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandrew94/poker-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sandrew94/poker-game/issues"
+  },
+  "homepage": "https://github.com/Sandrew94/poker-game#readme",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}

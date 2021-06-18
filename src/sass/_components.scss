@@ -19,11 +19,36 @@
 //RESULT HAND
 
 .main__hand {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &--display-cards {
-    font-size: 2rem;
+    display: flex;
+    &-1 {
+      @include displayCardScss;
+      background-position: 0px center;
+    }
+    &-2 {
+      @include displayCardScss;
+      background-position: 0px center;
+    }
+    &-3 {
+      @include displayCardScss;
+      background-position: 0px center;
+    }
+    &-4 {
+      @include displayCardScss;
+      background-position: 0px center;
+    }
+    &-5 {
+      @include displayCardScss;
+      background-position: 0px center;
+    }
   }
 
   &--text {
+    margin-top: 2rem;
     font-size: 2rem;
   }
 }

@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pocker Game</title>
 
-    <script defer type="module" src="/src/pockerGame_main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/src/sass/main.css" />
+    <script defer type="module" src="/src/pockerGame_main.js"></script>
   </head>
   <body>
     <main class="main">
@@ -17,9 +22,15 @@
             Click me to generate the hand!
           </button>
         </div>
-        <div class="main__hand-result">
-          <div class="main__hand-cards">card1 card2 card3 card4 card5</div>
-          <span class="main__hand-text">The value of the hand is...</span>
+        <div class="main__hand">
+          <div class="main__hand--display-cards">
+            <span class="main_hand--card-1">card 1</span>
+            <span class="main_hand--card-2">card 2</span>
+            <span class="main_hand--card-3">card 3</span>
+            <span class="main_hand--card-4">card 4</span>
+            <span class="main_hand--card-5">card 5</span>
+          </div>
+          <span class="main__hand--text">The value of the hand is...</span>
         </div>
       </div>
     </main>

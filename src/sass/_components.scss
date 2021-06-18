@@ -1,4 +1,29 @@
+/////////////////////////////////
+//BUTTON
+
 .main__container {
+  height: 10rem;
   &-button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: $color-grey-dark-3;
+    border: none;
+    padding: 0.7rem 5rem;
+    border-radius: 100px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+/////////////////////////////////
+//RESULT HAND
+
+.main__hand {
+  &--display-cards {
+    font-size: 2rem;
+  }
+
+  &--text {
+    font-size: 2rem;
   }
 }

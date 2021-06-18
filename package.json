@@ -2,8 +2,10 @@
   "name": "poker-game",
   "version": "1.0.0",
   "description": "Given various poker hands as arguments, print what type of hand each argument is.",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
     "test": "jest --coverage --verbose"
   },
   "repository": {
@@ -17,6 +19,9 @@
   },
   "homepage": "https://github.com/Sandrew94/poker-game#readme",
   "devDependencies": {
-    "jest": "^27.0.4"
-  }
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "jest": "^27.0.4",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "dependencies": {}
 }

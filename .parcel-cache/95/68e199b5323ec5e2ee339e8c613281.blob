@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocker Game</title>
+
+    <script defer="" type="module" src="846522758a02d8ec6362cd6477dca158"></script>
+    <link rel="stylesheet" href="6f3383f8fbe7de451bb8d0df62c79a40">
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__content">
+        asdasafgafsa
+        <div class="main__hand-button"></div>
+        <div class="main__hand-result"></div>
+      </div>
+    </main>
+  </body>
+</html>

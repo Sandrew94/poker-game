@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.main__content {
+  width: 70rem;
+  height: 70rem;
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+}
+/*# sourceMappingURL=index.HASH_REF_4b4dac7bc024e44091b1469a1206e35b.css.map */

@@ -7,9 +7,21 @@
     <title>Pocker Game</title>
 
     <script defer type="module" src="/src/pockerGame_main.js"></script>
-    <link rel="stylesheet" href="/src/sass/main.scss" />
+    <link rel="stylesheet" href="/src/sass/main.css" />
   </head>
   <body>
-    TEST
+    <main class="main">
+      <div class="main__content">
+        <div class="main__container">
+          <button class="main__container-button">
+            Click me to generate the hand!
+          </button>
+        </div>
+        <div class="main__hand-result">
+          <div class="main__hand-cards">card1 card2 card3 card4 card5</div>
+          <span class="main__hand-text">The value of the hand is...</span>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,7 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "test", function () {
+  return _displayHandJs.test1;
+});
+var _displayHandJs = require("displayHand.js");
+const test1 = console.log("text");

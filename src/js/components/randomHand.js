@@ -8,22 +8,26 @@ S 39 40 41 42 43 44 45 46 47 48 49 50 51
 
 */
 
-const randomArrNum = Array.from(Array(5), (_, i) =>
-  Math.floor(Math.random() * 51 + 1)
-);
+const handDisplay = function () {
+  //Random number
+  const randomArrNum = Array.from(Array(5), (_, i) =>
+    Math.floor(Math.random() * 51 + 1)
+  );
+  console.log(randomArrNum);
 
-//console.log(randomArrNum);
-
-const handDisplay = (hand) => {
-  const values = "23456789TJQKA";
-  const suits = [`♣︎`, `♦︎`, `♥︎`, `♠︎`];
-  return hand
-    .map((el) => {
+  //Display random numbers
+  const handDisplayRandom = (hand) => {
+    const values = "23456789TJQKA";
+    const suits = [`♣︎`, `♦︎`, `♥︎`, `♠︎`];
+    return hand.map((el) => {
       return `${values[el % values.length]}${
         suits[Math.floor(el / values.length)]
       }`;
-    })
-    .join(" ");
+    });
+    //.join(" ");
+  };
+
+  return handDisplayRandom(randomArrNum);
 };
 
-export default handDisplay(randomArrNum);
+export default handDisplay();

@@ -446,9 +446,10 @@ id) /*: string*/
 var _jsComponentsRandomHandJs = require("./js/components/randomHand.js");
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _jsComponentsRandomHandJsDefault = _parcelHelpers.interopDefault(_jsComponentsRandomHandJs);
+require("./js/view/displayHand.js");
 console.log(_jsComponentsRandomHandJsDefault.default);
 
-},{"./js/components/randomHand.js":"3KBpY","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3KBpY":[function(require,module,exports) {
+},{"./js/components/randomHand.js":"3KBpY","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./js/view/displayHand.js":"2OwDN"}],"3KBpY":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 /*
@@ -513,6 +514,19 @@ exports.export = function (dest, destName, get) {
     get: get
   });
 };
+},{}],"2OwDN":[function(require,module,exports) {
+//Elements
+
+const btnGenerateCard = document.querySelector(".main__container-button");
+
+//Default card
+
+const defaultCard = function () {};
+
+btnGenerateCard.addEventListener("click", () => {
+  console.log("testo prova");
+});
+
 },{}]},["2SM0S","4E06r"], "4E06r", "parcelRequiree0bf")
 
 //# sourceMappingURL=index.9c32ce6a.js.map

@@ -1,0 +1,7 @@
+//Elements
+
+const btnGenerateCard = document.querySelector(".main__container-button");
+
+btnGenerateCard.addEventListener("click", () => {
+  console.log("testo prova");
+});

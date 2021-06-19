@@ -1,0 +1,3 @@
+//Elements
+
+const btnGenerateCard = document.querySelector(".main__container-button");

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocker Game</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="/index.HASH_REF_2d37ce8e5852251c80eb4d0d962c1fe9.css">
+    <script defer="" type="module" src="/index.HASH_REF_3b05c963d8f23f1b787097969c32ce6a.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__content">
+        <div class="main__container">
+          <button class="main__container-button">
+            Click me to generate the hand!
+          </button>
+        </div>
+        <div class="main__hand">
+          <div class="main__hand--display-cards">
+            <span class="main_hand--cards-1"></span>
+            <span class="main_hand--cards-2"></span>
+            <span class="main_hand--cards-3"></span>
+            <span class="main_hand--cards-4"></span>
+            <span class="main_hand--cards-5"></span>
+          </div>
+          <span class="main__hand--text">The value of the hand is..</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

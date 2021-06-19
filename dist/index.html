@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocker Game</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="/index.962c1fe9.css">
     <script defer="" type="module" src="/index.9c32ce6a.js"></script>
-    <link rel="stylesheet" href="/index.1206e35b.css">
   </head>
   <body>
     <main class="main">
       <div class="main__content">
-        <div class="main__hand-button"></div>
-        <div class="main__hand-result"></div>
+        <div class="main__container">
+          <button class="main__container-button">
+            Click me to generate the hand!
+          </button>
+        </div>
+        <div class="main__hand">
+          <div class="main__hand--display-cards">
+            <span class="main_hand--cards-1"></span>
+            <span class="main_hand--cards-2"></span>
+            <span class="main_hand--cards-3"></span>
+            <span class="main_hand--cards-4"></span>
+            <span class="main_hand--cards-5"></span>
+          </div>
+          <span class="main__hand--text">The value of the hand is..</span>
+        </div>
       </div>
     </main>
   </body>

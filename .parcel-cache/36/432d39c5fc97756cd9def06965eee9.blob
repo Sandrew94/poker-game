@@ -1,0 +1,6 @@
+"use strict";
+var _jsComponentsRandomHandJs = require("./js/components/randomHand.js");
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _jsComponentsRandomHandJsDefault = _parcelHelpers.interopDefault(_jsComponentsRandomHandJs);
+var _jsViewDisplayHandJs = require("./js/view/displayHand.js");
+console.log(_jsComponentsRandomHandJsDefault.default, _jsViewDisplayHandJs);

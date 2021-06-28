@@ -138,4 +138,39 @@ body {
   margin-top: 2rem;
   font-size: 2rem;
 }
+
+.animation {
+  -webkit-animation: drawCard cubic-bezier(0.5, 0, 0.75, 0) 1.5s;
+          animation: drawCard cubic-bezier(0.5, 0, 0.75, 0) 1.5s;
+}
+
+@-webkit-keyframes drawCard {
+  0% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes drawCard {
+  0% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,3 @@
-
-
 const randomHand = (hand) => {
   const values = "23456789TJQKA";
   const suits = [`♣︎`, `♦︎`, `♥︎`, `♠︎`];

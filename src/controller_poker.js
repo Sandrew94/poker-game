@@ -2,15 +2,15 @@
 
 import randomHand from "./js/components/randomHand.js";
 import displayCard from "./js/view/displayCard.js";
+import valueHand from "./js/components/cardValue.js";
 
 //Elements
 const btnGenerateCard = document.querySelector(".main__container-button");
 
-
 //Controller
 
 const init = function () {
-     /* 
+  /* 
     Card Matrix
     .  2  3  4  5  6  7  8  9  T  J  Q  K  A
     C 00 01 02 03 04 05 06 07 08 09 10 11 12
@@ -19,15 +19,17 @@ const init = function () {
     S 39 40 41 42 43 44 45 46 47 48 49 50 51
     */
 
-    //Create an arr of 5 elements with random numbers from 1 to 52
-    const randomNum = Array.from(Array(5), (_, i) => Math.floor(Math.random() * 51 + 1));
-    
-    //Taken ar array with random numbers, convert their to the card Matrix
-    const result = randomHand(randomNum);
-  
-    return displayCard(result);//Transform the array of hand (number + seed) in card on the screen
-  };
-  
+  //Create an arr of 5 elements with random numbers from 1 to 52
+  const randomNum = Array.from(Array(5), (_, i) =>
+    Math.floor(Math.random() * 51 + 1)
+  );
 
+  //Taken ar array with random numbers, convert their to the card Matrix
+  const result = randomHand(randomNum);
 
-  btnGenerateCard.addEventListener("click", init);
+  displayCard(result); //Transform the array of hand (number + seed) in card on the screen
+
+  console.log(valueHand(randomNum));
+};
+
+btnGenerateCard.addEventListener("click", init);

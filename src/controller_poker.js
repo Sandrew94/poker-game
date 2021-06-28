@@ -1,8 +1,10 @@
 "use strict";
 
 import randomHand from "./js/components/randomHand.js";
-import displayCard from "./js/view/displayCard.js";
 import valueHand from "./js/components/cardValue.js";
+
+import displayCard from "./js/view/displayCard.js";
+import injectValue from "./js/view/displayValue.js";
 
 //Elements
 const btnGenerateCard = document.querySelector(".main__container-button");
@@ -29,7 +31,7 @@ const init = function () {
 
   displayCard(result); //Transform the array of hand (number + seed) in card on the screen
 
-  console.log(valueHand(randomNum));
+  injectValue(valueHand(randomNum));
 };
 
 btnGenerateCard.addEventListener("click", init);

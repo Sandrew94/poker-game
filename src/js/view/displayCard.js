@@ -1,13 +1,11 @@
 import calcPosCard from "../components/calcPosCard.js";
 
-
 //Elements
 const firstCard = document.querySelector(".main__hand--display-cards-1");
 const secondCard = document.querySelector(".main__hand--display-cards-2");
 const thirdCard = document.querySelector(".main__hand--display-cards-3");
 const quarterCard = document.querySelector(".main__hand--display-cards-4");
 const fiveCard = document.querySelector(".main__hand--display-cards-5");
-
 
 //Display cards
 
@@ -68,18 +66,18 @@ const displayCard = function (cardArr) {
   };
 
   Object.keys(cardValues).map((el, idx) => {
-    //console.log(el, idx);
     el == cardArr[0] && (firstCard.style.backgroundPosition = calcPosCard(idx));
 
-    el == cardArr[1] && (secondCard.style.backgroundPosition = calcPosCard(idx));
+    el == cardArr[1] &&
+      (secondCard.style.backgroundPosition = calcPosCard(idx));
 
     el == cardArr[2] && (thirdCard.style.backgroundPosition = calcPosCard(idx));
 
-    el == cardArr[3] && (quarterCard.style.backgroundPosition = calcPosCard(idx));
+    el == cardArr[3] &&
+      (quarterCard.style.backgroundPosition = calcPosCard(idx));
 
     el == cardArr[4] && (fiveCard.style.backgroundPosition = calcPosCard(idx));
   });
 };
 
 export default displayCard;
-

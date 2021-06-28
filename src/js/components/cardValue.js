@@ -9,8 +9,6 @@ const valueHand = function (hand) {
     values[card % 13] += 1;
   });
 
-  //console.log(values);
-
   const firstCardIndex = values.findIndex((index) => index === 1);
 
   const ranks = {

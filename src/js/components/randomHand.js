@@ -6,7 +6,6 @@ const randomHand = (hand) => {
       suits[Math.floor(el / values.length)]
     }`;
   });
-  //.join(" ");
 };
 
 export default randomHand;

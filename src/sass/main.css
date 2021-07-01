@@ -2,6 +2,7 @@
   max-width: 130rem;
   margin: 8rem auto;
   min-height: 50rem;
+  position: relative;
 }
 
 .main__content {
@@ -67,6 +68,14 @@ body {
   border-radius: 100px;
   width: 100%;
   cursor: pointer;
+}
+
+.main__container-royal {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 10%;
+  padding: 0.7rem 1rem;
 }
 
 .main__hand {

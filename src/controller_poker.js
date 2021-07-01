@@ -8,6 +8,7 @@ import injectValue from "./js/view/displayValue.js";
 
 //Elements
 const btnGenerateCard = document.querySelector(".main__container-button");
+const royalHand = document.querySelector(".main__container-royal");
 
 //Controller
 
@@ -19,7 +20,7 @@ const init = function () {
     D 13 14 15 16 17 18 19 20 21 22 23 24 25
     H 26 27 28 29 30 31 32 33 34 35 36 37 38
     S 39 40 41 42 43 44 45 46 47 48 49 50 51
-    */
+  */
 
   //Create an arr of 5 elements with random numbers from 1 to 52
   const randomNum = Array.from(Array(5), (_, i) =>
@@ -32,6 +33,33 @@ const init = function () {
   displayCard(result); //Transform the array of hand (number + seed) in card on the screen
 
   injectValue(valueHand(randomNum));
+
+  valueHand(randomNum);
 };
 
 btnGenerateCard.addEventListener("click", init);
+
+//TRY TO SIMULATE HOW MANY ROYAL FLUSH HAND'S DO YOU TAKE IN 10000000 HANDS
+royalHand.addEventListener("click", () => {
+  let i = 0;
+
+  if (confirm("This task is strong, do you want to continue?"))
+    do {
+      const randomNum = Array.from(Array(5), (_, i) =>
+        Math.floor(Math.random() * 51 + 1)
+      );
+      const result = randomHand(randomNum);
+
+      const display = displayCard(result);
+
+      injectValue(valueHand(randomNum));
+
+      const tryRandomHand = valueHand(randomNum);
+
+      if (tryRandomHand === "Royal Flush") {
+        console.log("Royal Flush");
+        return display;
+      }
+      i++;
+    } while (i < 10000000);
+});

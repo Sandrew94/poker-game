@@ -43,7 +43,7 @@ const valueHand = function (hand) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
-  return rankDescription;
+  return { rankDescription, values, suits, ranks };
 };
 
 export default valueHand;

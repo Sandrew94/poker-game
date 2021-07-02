@@ -1,3 +1,5 @@
 node_modules
-tips.js
+tips
 .parcel-cache
+coverage
+dist

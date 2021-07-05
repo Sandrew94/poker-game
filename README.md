@@ -1,7 +1,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">#Poker Game</h3>
+  <h1 align="center">#Poker Game</h1>
 
 <!-- TABLE OF CONTENTS -->
 <summary>
@@ -53,9 +53,9 @@ The list of hands in ranking order are as follows:
 
 ## Usage
 
-1. Open [poker-game](netlify.net)
+1. Open [poker-game](poker-game-td.netlify.app)
 2. Just click the button to generate the hand
-3. If do you wont to see the Royal Flush, click the button on the right.
+3. Do you wont to see the Royal Flush? Click the button on the top-right.
 
 <!-- CONTRIBUTING -->
 

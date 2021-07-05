@@ -25,7 +25,16 @@ const init = function () {
 
   injectValue(valueHand(randomNum).rankDescription);
 
-  return valueHand(randomNum);
+  valueHand(randomNum);
+
+  ///////////
+
+  const tryRandomHand = valueHand(randomNum).rankDescription;
+
+  if (tryRandomHand === "Royal Flush") {
+    console.log("Royal Flush", result);
+    return display;
+  }
 };
 
 btnGenerateCard.addEventListener("click", init);
@@ -40,22 +49,8 @@ royalHand.addEventListener("click", () => {
   let i = 0;
 
   if (confirm("This task is strong, do you want to continue?"))
-    do {
-      const randomNum = Array.from(Array(5), (_, i) =>
-        Math.floor(Math.random() * 51 + 1)
-      );
-      const result = randomHand(randomNum);
-
-      const display = displayCard(result);
-
-      injectValue(valueHand(randomNum).rankDescription);
-
-      const tryRandomHand = valueHand(randomNum).rankDescription;
-
-      if (tryRandomHand === "Royal Flush") {
-        console.log("Royal Flush", result);
-        return display;
-      }
+    while (i <= 10000000) {
       i++;
-    } while (i < 10000000);
+      init();
+    }
 });

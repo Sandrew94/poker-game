@@ -53,7 +53,7 @@ The list of hands in ranking order are as follows:
 
 ## Usage
 
-1. Open [poker-game](poker-game-td.netlify.app)
+1. Open [poker-game](https://poker-game-td.netlify.app/)
 2. Just click the button to generate the hand
 3. Do you wont to see the Royal Flush? Click the button on the top-right.
 

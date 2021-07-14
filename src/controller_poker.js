@@ -2,6 +2,7 @@
 
 import randomHand from "./js/components/randomHand.js";
 import valueHand from "./js/components/cardValue.js";
+import randomNumFunc from "./js/components/randomNumbers.js";
 
 import displayCard from "./js/view/displayCard.js";
 import injectValue from "./js/view/displayValue.js";
@@ -12,20 +13,13 @@ const royalHand = document.querySelector(".main__container-royal");
 
 //Controller
 
-//Create an arr of 5 elements with random numbers from 1 to 52
-const randomNumFunc = (arrLenght, range) => {
-  return Array.from(Array(arrLenght), (_, i) =>
-    Math.floor(Math.random() * range + 1)
-  );
-};
-
 const init = function (arr) {
   //Taken ar array with random numbers, convert their to the card Matrix
   const result = randomHand(arr);
 
   displayCard(result); //Transform the array of hand (number + seed) in card on the screen
 
-  injectValue(valueHand(arr).rankDescription);
+  injectValue(valueHand(arr));
 };
 
 btnGenerateCard.addEventListener("click", () => init(randomNumFunc(5, 51)));

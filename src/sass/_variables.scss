@@ -13,6 +13,12 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
+$bp-bigLargest: 112.5em;
+$bp-largest: 75em; // 1200 px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 31.25em; //500px
+
 // MIXIN
 @mixin displayCardScss {
   background-color: #fff;
@@ -20,4 +26,14 @@ $color-black: #000;
   height: 21rem;
   width: 15rem;
   background-image: url("../img/deck.png");
+
+  @media only screen and (max-width: $bp-bigLargest) {
+    height: 19rem;
+    width: 13rem;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    height: 26rem;
+    width: 19rem;
+  }
 }

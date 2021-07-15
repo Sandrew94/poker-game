@@ -4,5 +4,7 @@ tips
 coverage
 dist
 .DS_Store
-randomNumNoRep.js
 Flowchart__poker-game.shapex
+main.css
+main.css.map
+randomNumbers.js

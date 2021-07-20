@@ -1,15 +1,15 @@
 import calcPosCard from "../components/calcPosCard.js";
 
-//Elements
-const firstCard = document.querySelector(".main__hand--display-cards-1");
-const secondCard = document.querySelector(".main__hand--display-cards-2");
-const thirdCard = document.querySelector(".main__hand--display-cards-3");
-const quarterCard = document.querySelector(".main__hand--display-cards-4");
-const fiveCard = document.querySelector(".main__hand--display-cards-5");
-
 //Display cards
 
 const displayCard = function (cardArr) {
+  //Elements
+  const firstCard = document.querySelector(".main__hand--display-cards-1");
+  const secondCard = document.querySelector(".main__hand--display-cards-2");
+  const thirdCard = document.querySelector(".main__hand--display-cards-3");
+  const quarterCard = document.querySelector(".main__hand--display-cards-4");
+  const fiveCard = document.querySelector(".main__hand--display-cards-5");
+
   const cardValues = {
     "A♥︎": 1,
     "2♥︎": 2,
@@ -77,6 +77,8 @@ const displayCard = function (cardArr) {
       (quarterCard.style.backgroundPosition = calcPosCard(idx));
 
     el == cardArr[4] && (fiveCard.style.backgroundPosition = calcPosCard(idx));
+
+    //When it matches the equality, it change the position of cards with coordinates (-150px * idx)
   });
 };
 

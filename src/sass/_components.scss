@@ -3,14 +3,27 @@
 
 .main__container {
   height: 10rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    height: 14rem;
+    justify-content: space-evenly;
+  }
+
   &-button {
+    margin: 0 auto;
+  }
+  &-button-1 {
     font-family: inherit;
     font-size: 1.2rem;
     color: $color-grey-dark-3;
     border: none;
     padding: 0.7rem 5rem;
     border-radius: 100px;
-    width: 100%;
+    //width: 100%;
     cursor: pointer;
 
     @media only screen and (max-width: $bp-largest) {
@@ -18,7 +31,7 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      margin-top: 3rem;
+      //margin-top: 3rem;
     }
   }
 
@@ -28,9 +41,44 @@
     top: 2rem;
     width: 10%;
     padding: 0.7rem 1rem;
+
     @media only screen and (max-width: $bp-medium) {
       margin-top: 0rem;
+
+      width: 15%;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      right: 1rem;
+      top: 1rem;
+      width: 20%;
+    }
+  }
+
+  &-players-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 35%;
+
+    .text {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .select {
+    width: 6.5rem;
+    padding: 5px 35px 5px 5px;
+    font-size: 1.6rem;
+    border: 1px solid rgb(63, 62, 62);
+    border-radius: 6px;
+    height: 4rem;
+    appearance: none;
+    background: url(../img/4_aces_96x96-32_37918.png) 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -42,8 +90,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 2px solid $color-gray-light-1;
+  border-top: 2px solid $color-gray-light-1;
   @media only screen and (max-width: $bp-medium) {
-    width: 70%;
+    width: 100%;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -64,14 +114,17 @@
     &-1 {
       @include displayCardScss;
       background-position: 0px center;
+      margin-bottom: -5rem;
     }
     &-2 {
       @include displayCardScss;
       background-position: 0px center;
+      margin-bottom: -5rem;
     }
     &-3 {
       @include displayCardScss;
       background-position: 0px center;
+      margin-bottom: -5rem;
     }
     &-4 {
       @include displayCardScss;
@@ -86,6 +139,10 @@
   &--text {
     margin-top: 2rem;
     font-size: 2rem;
+
+    :last-child {
+      display: none;
+    }
   }
 }
 

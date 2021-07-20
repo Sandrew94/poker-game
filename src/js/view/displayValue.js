@@ -1,7 +1,7 @@
 const textValue = document.querySelector(".main__hand--text");
 
-const injectValue = function (value) {
-  textValue.innerHTML = `The value of the hand is  ${value}`;
+const displayValue = function (value) {
+  return (textValue.innerHTML = `<span class="main__hand--text">The value of the player hand is ${value} </span>`);
 };
 
-export default injectValue;
+export default displayValue;

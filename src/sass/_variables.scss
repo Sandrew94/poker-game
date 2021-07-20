@@ -36,6 +36,9 @@ $bp-small: 31.25em; //500px
     height: 26rem;
     width: 19rem;
     transform: scale(0.8);
-    margin-left: -4.3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-left: -10rem;
   }
 }

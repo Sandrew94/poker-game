@@ -18,20 +18,14 @@ const btnGenerateCard = document.querySelector(".main__container-button");
 const royalHand = document.querySelector(".main__container-royal");
 const select = document.querySelector(".select");
 
+const mainHand = document.querySelector(".main__hand");
+
 /////////////////////
 ////////////////////
 
 //Create a selector
 playerSelector();
 
-//Repeat the init functions for each players choosen with the selector
-const repeatForPlayer = function (selectorNumber) {
-  for (let i = 1; i <= selectorNumber; i++) {
-    init(randomDeck());
-  }
-};
-
-/////////////
 /////////////
 
 //Controller
@@ -65,15 +59,36 @@ const init = function (arr) {
   displayCard(result); //Transform the array of hand (number + seed) in cards and display them in the container generated from generateHtmlContainer(arr, valueHandText);
 };
 
-btnGenerateCard.addEventListener("click", () => repeatForPlayer(select.value));
+/////////////
 
+// Repeat the init functions for each players choosen with the selector
+const repeatForPlayer = function (selectorNumber) {
+  for (let i = 1; i <= selectorNumber; i++) {
+    init(randomDeck());
+  }
+};
+
+btnGenerateCard.addEventListener("click", () => repeatForPlayer(select.value));
 /////////////
-/////////////
-/////////////
+////////////
 
 //SIMULATE ROYAL FLUSH HAND'S
 
-royalHand.addEventListener("click", () => {
+const royalHandFunc = function () {
+  let arrUniqueNum = [];
+
+  do {
+    let num = Math.floor(Math.random() * 4 + 1);
+    arrUniqueNum.push(num);
+    arrUniqueNum = arrUniqueNum.filter((item, index) => {
+      return arrUniqueNum.indexOf(item) === index;
+    });
+  } while (arrUniqueNum.length < 4);
+
+  arrUniqueNum.sort((a, b) => a - b);
+
+  mainHand.innerHTML = "";
+
   const allTypeRoyal = [
     [8, 9, 10, 11, 12],
     [21, 22, 23, 24, 25],
@@ -82,8 +97,12 @@ royalHand.addEventListener("click", () => {
   ];
 
   allTypeRoyal.map((_, idx) => {
-    const randomVal = Math.floor(Math.random() * 4);
+    if (arrUniqueNum[idx] == idx + 1) {
+      const objValue = Object.values(allTypeRoyal)[idx];
 
-    if (randomVal === idx) return init(Object.values(allTypeRoyal)[idx]);
+      return init(objValue);
+    }
   });
-});
+};
+
+royalHand.addEventListener("click", royalHandFunc);

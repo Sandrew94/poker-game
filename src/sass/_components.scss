@@ -15,8 +15,6 @@
 
   &-button {
     margin: 0 auto;
-  }
-  &-button-1 {
     font-family: inherit;
     font-size: 1.2rem;
     color: $color-grey-dark-3;
@@ -179,4 +177,10 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+///////////
+
+.hidden {
+  display: none;
 }

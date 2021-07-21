@@ -17,8 +17,9 @@ import generateHtmlContainer from "./js/view/generateHtmlContainer.js";
 const btnGenerateCard = document.querySelector(".main__container-button");
 const royalHand = document.querySelector(".main__container-royal");
 const select = document.querySelector(".select");
-
 const mainHand = document.querySelector(".main__hand");
+const mainHidden = document.querySelector(".main__hidden");
+const btn = document.getElementById("btn");
 
 /////////////////////
 ////////////////////
@@ -37,9 +38,12 @@ const randomDeck = function () {
 
   array = filterFromRandomNum(array, randomNum); //It remove the 5 cards taken before and decrease the length of the array
 
-  if (array.length <= 2) {
+  if (array.length <= 3) {
+    alert(
+      "You finished the cards in the deck, click the button again to continue!"
+    );
+    btn.innerText = "Stir the deck AGAIN and restart!";
     array = numberFrom0to52();
-    console.log("Stir the deck");
   } // When the deck has almost finish the cards it stir the deck
 
   return randomNum;
@@ -54,7 +58,8 @@ const init = function (arr) {
 
   const result = randomHand(arr); //convert random numbers in cards with seed and sign
 
-  console.log(result);
+  //console.log(result);
+  console.log(valueHandString);
 
   displayCard(result); //Transform the array of hand (number + seed) in cards and display them in the container generated from generateHtmlContainer(arr, valueHandText);
 };
